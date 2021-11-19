@@ -1,0 +1,49 @@
+What is Git
+Git is a version control system(VCS) which tracks changes in your project
+
+VCS?
+A VCS keeps track of the contributions of the developers working as a team on the projects.
+They maintain the history of code changes done and with project
+
+Github
+It is a cloud based hostig service that lets you manage Git repositories by using git.
+The developer can identify who has made what changes and then run tests and fix bugs
+if any and then do necessary feature implementation. In case of any unforeseen circumstances,
+the code can be reverted to any of the previously working versions
+
+What is a git repository?
+Git repository refers to a place where all the Git files are stored.
+These files can either be stored on the local repository or on the remote repository.
+
+
+How to create a git repository?
+install git in your system
+then create a folder for the project and then run git init.
+a .git file in the project folder which indicates that the repository has been created
+
+To set up your name and email address before using git commands
+git config --global user.name "Sindhu"
+git config --global user.email “myemail”
+
+Git Commands
+git init - initialize an empty Git repository
+git add filename - add unstaged files one by one
+git add . - add all unstaged files at once
+git status - this command shows which files modified in working directory
+git commit -m "message" - commits all files currently in Git's staging area
+git log - display's repository history in reverse order
+git diff - shows the cnahges made to the files
+git reset HEAD filename - Unstage the specified file from staging area (reverse of git add)
+git rm filename - removes the file
+git push - pushes the commits to the remote repo
+git pull - pulls the changes from the remote repo
+git checkout filename - undoes the changes made to the specific file (unstaged)
+git checkout . - undoes the changes made to all files (unstaged)
+
+
+Did practicals on Git:
+
+Created a couple of local repositories and pushed them to remote
+
+https://github.com/sindhug95/Summary-level-notes
+https://github.com/sindhug95/Git-Practice
