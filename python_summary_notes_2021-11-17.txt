@@ -1,0 +1,198 @@
+The basic slice format is variable[start:end:step]
+
+Boolean datatype : simple datatype which has 2 values TRUE,False
+we use boolean for some logical comparison
+
+Conditional Operators (returns True/False)
+
+< (less than)
+eg:
+5 < 6 -> True
+6 < 5 -> False
+
+> (greater than)
+
+eg:
+5 > 6 -> False
+6 > 5 -> True
+
+<= (Less than or equal to)
+
+eg:
+5 <= 6 -> True
+6 <= 5 -> False
+6 <= 6 -> True
+
+>= (Greater Than or equal to)
+
+eg:
+5 >= 6 -> False
+6 >= 5 -> True
+6 >= 6 -> True
+
+!= (Not equal to)
+
+eg:
+5 != 6 -> True
+5 != 5 -> False
+
+== (equal to)
+
+eg:
+5 == 6 -> False
+5 == 5 -> True
+
+
+if statement (indentation is important, start with 4 spaces inside the if body)
+
+eg:
+
+if 4>3:
+print("4 is greater than 3") --> you will get error (IndentationError: expected an indented block)
+
+
+if 4>3:
+  print("4 is greater than 3") -> only executed if the condition returns true
+
+Output:
+4 is greater than 3
+
+
+if else statement
+
+eg:
+
+a = 3
+b = 4
+
+if a > b:
+  print("a is greater than b")
+else:
+  print("b is greater than a")
+
+Output:
+b is greater than a
+
+elif statement:
+
+a = 4
+b = 4
+
+if a > b:
+  print("a is greater than b")
+elif a == b:
+  print("a is equal to b")
+else:
+  print("a is less than b")
+
+Output:
+a is equal to b
+
+
+Logical keywords:
+
+AND -> returns True when both sides of AND are true
+
+eg:
+
+print(3 < 4 and 5 < 6)  -> true , because both sides of AND are true
+print(3 < 4 and 5 > 6)  -> false , because one of the sides/both sides of AND is false
+print(3 > 4 and 5 < 6)  -> false , because one of the sides/both sides of AND is false
+print(3 > 4 and 5 > 6)  -> false , because one of the sides/both sides of AND is false
+
+OR -> returns true if either one of the sides of OR is true
+
+print(3 < 4 or 5 < 6)  -> true , because both sides of OR are true
+print(3 < 4 or 5 > 6)  -> true , because one of the sides of OR is true
+print(3 > 4 or 5 < 6)  -> true , because one of the sides of OR is true
+print(3 > 4 or 5 > 6)  -> false , because both sides of OR is false
+
+Python Collections :
+
+Collections: it stores any amount of data in a single variable
+
+1. list
+
+-> it is mutable, meanining it can be changed, new values can be added/removed
+-> it is ordered, changeable and allows duplicate values.
+    Ordered -> items in list have a defined order, and that order will not change (index based 0, 1 etc).
+    changeable -> we can change, add, and remove items in a list after it has been created
+
+List methods:
+
+len() -> this method gives the length or number of items in the List
+eg:
+a = ["alpha", "beta", "gamma"]
+print(len(a)) -> 3
+
+remove() -> this method removes the specified item.
+eg:
+a = ["alpha", "beta", "gamma"]
+a.remove("alpha")
+print(a) -> ["beta", "gamma"]
+
+pop()
+-> this method removes the specified index
+eg:
+a = ["alpha", "beta", "gamma"]
+a.pop("1")
+print(a) -> ["alpha", "gamma"]
+
+-> also return the removed element:
+eg:
+a = ["alpha", "beta", "gamma"]
+x = a.pop("1")
+print(x) ->  beta
+
+-> when you don't specify the index, the pop() method removes the last item.
+
+append()
+-> this method adds an item to the end of the list
+eg:
+a = ["alpha", "beta", "gamma"]
+a.append("alpha two")
+print(a) -> ["alpha", "beta", "gamma", "alpha two"]
+
+-> also adds list to another list
+eg:
+a = ["alpha", "beta", "gamma"]
+b = ["alpha1", "beta1", "gamma1"]
+
+a.append(b)
+print(a) -> ["alpha", "beta", "gamma", ["alpha1", "beta1", "gamma1"]]
+
+
+insert() -> the insert() method inserts an item at the specified index
+eg:
+a = ["alpha", "beta", "gamma"]
+a.insert(1, "alpha two")
+print(a) -> ["alpha", "alpha two", "beta", "gamma"]
+
+
+Tuples:
+
+A tuple is a collection which is ordered, unchangeable and allows duplicate values.
+
+Unchangeable (immutable) -> we cannot change, add or remove items after the tuple has been created.
+
+count() ->	Returns the number of times a specified value occurs in a tuple
+eg:
+a = ("alpha", "beta", "gamma", "alpha")
+x = a.count("alpha")
+print(x) -> 2
+y = a.count("beta")
+print(y) -> 1
+
+index() -> Searches the tuple for a specified value and returns the first position of where it was found
+
+a = ("alpha", "beta", "gamma", "alpha")
+x = a.index("alpha")
+print(x) -> 0
+y = a.index("beta")
+print(y) -> 1
+
+Dictionary:
+
+-> stores data values in key:value pairs.
+
+-> it is a collection which is ordered (from python version 3.7), changeable and does not allow duplicates.
